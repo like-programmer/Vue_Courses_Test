@@ -1,0 +1,47 @@
+.button {
+  padding: 7px 30px;
+  border-radius: 5px;
+  transition: 0.3s;
+
+  &--primary {
+    background: $color-second-450;
+
+    &:hover {
+      background: $color-second-550;
+    }
+
+    & .button__font--button {
+      color: $color-first-0;
+    }
+  }
+
+  &--secondary {
+    background: $color-third-300;
+
+    &:hover {
+      background: $color-third-500;
+    }
+
+    & .button__font--button {
+      color: $color-first-0;
+    }
+  }
+
+  &--disabled {
+    background: $color-first-150;
+
+    & .button__font--button {
+      color: $color-first-200;
+    }
+  }
+
+  &__font {
+    &--button {
+      font-family: $font-default;
+      font-size: 17px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 21px;
+    }
+  }
+}

@@ -1,0 +1,26 @@
+.page-header {
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+  box-shadow: 0 2px 4px -1px rgba(0,0,0,.2),
+  0 4px 5px 0 rgba(0,0,0,.14),
+  0 1px 10px 0 rgba(0,0,0,.12);
+  background: $color-third-500;
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 16px;
+    min-height: 70px;
+  }
+
+  &__font {
+    &--email {
+      font-family: $font-default;
+      font-size: 17px;
+      font-style: normal;
+      font-weight: 700;
+      color: $color-first-0;
+    }
+  }
+}

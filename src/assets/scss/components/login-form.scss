@@ -1,0 +1,20 @@
+.login-form {
+  width: 447px;
+
+  &__input {
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+  }
+
+  &__font {
+    &--header {
+      color: #5f5f5f;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 21px;
+      letter-spacing: -0.425px;
+    }
+  }
+}

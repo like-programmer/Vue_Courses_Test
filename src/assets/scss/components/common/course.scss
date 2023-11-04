@@ -1,0 +1,26 @@
+.course {
+  padding: 25px 30px;
+  background: $color-third-350;
+
+
+  &__title {
+    margin-bottom: 20px;
+  }
+
+  &__lessons {
+    display: flex;
+    align-items: flex-start;
+    gap: 25px;
+  }
+
+  &__font {
+    &__title {
+      font-family: $font-default;
+      font-size: 32px;
+      font-style: normal;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: $color-third-100;
+    }
+  }
+}

@@ -3,11 +3,19 @@ import VueRouter from 'vue-router';
 Vue.use(VueRouter);
 
 const routes = [
-  // {
-  //   path: '/',
-  //   name: 'login',
-  //   component: () => import('../pages/LoginPage.vue'),
-  // },
+  {
+    path: '/',
+    name: 'login',
+    component: () => import('../pages/LoginPage.vue'),
+  },
+  {
+    path: '/courses',
+    name: 'courses',
+    meta: {
+      layout: 'AppLayout',
+    },
+    component: () => import('../pages/CoursesPage.vue'),
+  },
 ];
 
 const router = new VueRouter({

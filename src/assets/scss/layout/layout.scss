@@ -1,0 +1,13 @@
+.layout {
+  display: flex;
+  flex-direction: column;
+  background: $color-third-100;
+  min-height: 100vh;
+
+  &__wrapper {
+    flex-grow: 1;
+    margin-top: 10px;
+    margin-bottom: 40px;
+    padding: 40px 30px;
+  }
+}
