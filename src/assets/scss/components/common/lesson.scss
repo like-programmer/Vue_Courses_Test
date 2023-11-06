@@ -1,6 +1,21 @@
 .lesson {
-  width: 340px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 10px 0;
+  gap: 0;
+  width: 300px;
   background: $color-second-200;
+
+  @include mobile-up {
+    margin: 5px;
+    width: 313px;
+  }
+
+  @include tablet-up {
+    margin: 10px;
+    width: 340px;
+  }
 
   &__title {
     position: relative;
@@ -23,15 +38,16 @@
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
-    gap: 5px;
-    margin: 0 -10px;
+    margin: auto -5px 0;
   }
 
   &__info {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 10px;
+    justify-content: space-between;
+    padding: 5px;
+    margin: 0 3px;
     border-radius: 10px;
     background: $color-second-450;
   }
@@ -80,7 +96,7 @@
 
     &--number {
       font-family: $font-default;
-      font-size: 24px;
+      font-size: 20px;
       font-style: normal;
       font-weight: 700;
       text-transform: uppercase;

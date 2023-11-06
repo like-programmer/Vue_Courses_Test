@@ -1,0 +1,28 @@
+.banner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 40px 20px;
+  max-width: 580px;
+  gap: 25px;
+  border-radius: 16px 4px;
+  border: 3px dashed $color-third-225;
+
+  &__font {
+    &--text {
+      font-family: $font-default;
+      font-size: 21px;
+      font-style: normal;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: $color-second-400;
+      text-align: center;
+
+      @include mobile-up {
+        font-size: 24px;
+      }
+    }
+  }
+}

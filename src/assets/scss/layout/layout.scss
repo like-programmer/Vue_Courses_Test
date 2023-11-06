@@ -8,6 +8,11 @@
     flex-grow: 1;
     margin-top: 10px;
     margin-bottom: 40px;
-    padding: 40px 30px;
+    padding: 20px 10px;
+
+    @include mobile-up {
+      padding: 40px 30px;
+
+    }
   }
 }

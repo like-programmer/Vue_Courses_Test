@@ -9,13 +9,17 @@
   &__wrapper {
     display: flex;
     align-items: center;
-    justify-content: flex-end;
-    padding: 16px;
+    justify-content: space-between;
+    padding: 16px 30px;
     min-height: 70px;
   }
 
+  &__button {
+    margin-left: auto;
+  }
+
   &__font {
-    &--email {
+    &--username {
       font-family: $font-default;
       font-size: 17px;
       font-style: normal;

@@ -1,26 +1,66 @@
 .course {
-  padding: 25px 30px;
+  padding: 25px 20px;
   background: $color-third-350;
+  max-width: 410px;
+  margin: 0 auto;
+
+  @include mobile-up {
+    padding: 25px 30px;
+    max-width: 708px;
+    margin: 0 auto;
+  }
+
+  @include tablet-up {
+    max-width: 830px;
+  }
+
+  @include desktop-up {
+    max-width: none;
+  }
 
 
   &__title {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+
+    @include mobile-up {
+      margin-bottom: 20px;
+    }
   }
 
   &__lessons {
     display: flex;
-    align-items: flex-start;
-    gap: 25px;
+    flex-direction: column;
+    align-items: center;
+
+    @include mobile-up {
+      flex-wrap: wrap;
+      flex-direction: row;
+      align-items: stretch;
+      max-width: 701px;
+      margin: 0 auto;
+    }
+
+    @include tablet-up {
+      max-width: 721px;
+    }
+
+    @include desktop-up {
+      max-width: none;
+    }
   }
 
   &__font {
     &__title {
       font-family: $font-default;
-      font-size: 32px;
+      font-size: 24px;
       font-style: normal;
       font-weight: 700;
       text-transform: uppercase;
       color: $color-third-100;
+
+      @include mobile-up {
+        font-size: 32px;
+      }
     }
   }
 }

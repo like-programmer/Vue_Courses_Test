@@ -1,5 +1,11 @@
 <template>
-  <input class="input" :type="type" :placeholder="placeholder">
+  <input
+      class="input"
+      :type="type"
+      :placeholder="placeholder"
+      :value="value"
+      @input="$emit('change', $event.target.value)"
+  >
 </template>
 
 <script>
@@ -14,6 +20,10 @@ export default {
       type: String,
       default: '',
     },
+    value: {
+      type: String,
+      required: true,
+    }
   }
 }
 </script>

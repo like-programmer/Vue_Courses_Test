@@ -1,3 +1,22 @@
+// breakpoints
+@mixin mobile-up {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin tablet-up {
+  @media (min-width: 1025px) {
+    @content;
+  }
+}
+
+@mixin desktop-up {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}
+
 // placeholder
 
 @mixin placeholder {

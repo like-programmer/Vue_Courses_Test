@@ -1,12 +1,17 @@
 <template>
-  <form class="login-form">
+  <div class="login-form">
     <Card align="center">
       <template #header>
         <span class="login-form__font login-form__font--header">Login</span>
       </template>
 
       <div class="login-form__input">
-        <Input type="text" placeholder="Username"/>
+        <Input
+            type="text"
+            placeholder="Username"
+            :value="userName"
+            @change="setNewName"
+        />
       </div>
 
       <template #actions>
@@ -15,7 +20,7 @@
         </Button>
       </template>
     </Card>
-  </form>
+  </div>
 </template>
 
 <script>
@@ -39,20 +44,20 @@ export default {
   data() {
     return {
       userName: '',
-      phone: ''
     }
   },
   watch: {
-    // userName(newName) {
-    //   this.userName = newName.replace(/[^a-zA-zа-яА-Я\s]/, '')
-    // },
-    // phone(newPhone) {
-    //   this.phone = newPhone.replace(/[^.0-9-()+\s]/, '')
-    // }
+    userName(newName) {
+      this.userName = newName.replace(/[^a-zA-zа-яА-Я\s]/, '')
+    },
   },
   methods: {
+    setNewName(value) {
+      this.userName = value
+    },
+
     onSubmit() {
-      this.$emit('submit', {})
+      this.$emit('submit', this.userName)
     }
   }
 }

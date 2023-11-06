@@ -1,0 +1,58 @@
+.lesson-page {
+
+  &__title {
+    margin-top: 15px;
+
+    @include mobile-up {
+      margin-top: 0;
+      margin-bottom: 40px;
+    }
+  }
+
+  &__text {}
+
+  &__end-banner {}
+
+  &__paragraph {
+    margin: 25px 0;
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+
+  &__font {
+    &--title {
+      font-family: $font-default;
+      font-size: 38px;
+      font-style: normal;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: $color-third-500;
+    }
+
+    &--paragraph {
+      font-family: $font-default;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 500;
+      color: $color-third-350;
+    }
+
+    &--action {
+      font-family: $font-default;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 500;
+      color: $color-third-400;
+      text-decoration: none;
+      transition: 0.3s;
+
+      &:hover {
+        color: $color-third-225;
+      }
+    }
+  }
+}

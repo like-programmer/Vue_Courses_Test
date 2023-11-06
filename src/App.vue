@@ -7,6 +7,8 @@
 </template>
 
 <script>
+import {mapActions, mapMutations} from "vuex";
+
 import AppLayout from '@/components/layout/AppLayout.vue';
 
 export default {
@@ -19,6 +21,22 @@ export default {
       return this.$route?.meta?.layout || 'div';
     },
   },
+  mounted() {
+    const activeUser = JSON.parse(localStorage.getItem('userName'));
+
+    if(activeUser) {
+      this.setUsername(activeUser)
+      this.getUserData()
+    }
+  },
+  methods: {
+    ...mapActions({
+      getUserData: 'mainData/getUserData',
+    }),
+    ...mapMutations({
+      setUsername: 'mainData/setUsername',
+    }),
+  }
 }
 </script>
 <style>
