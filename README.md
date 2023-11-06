@@ -1,4 +1,7 @@
-# form
+# Vue Courses Test task
+
+## Live demo
+http://smth-from-daria.zzz.com.ua/
 
 ## Project setup
 ```
